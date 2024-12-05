@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+/**********************************메인배너**********************************/
+.mainban {height: 100vh; position: relative;}
+.mainban .txt_area { position: absolute; top: 50%; left: 0; right: 0; z-index: 1; transform: translateY(-50%); color: #fff;}
+.mainban .txt_area h2{font-size: 8.0rem; font-weight: 500;text-shadow: 5px 5px 5px rgba(0, 0, 0,0.6);}
+.mainban .txt_area p{font-size: 3.5rem; font-weight:500; text-shadow: 2px 2px 5px rgba(0, 0, 0,0.8);}
+
+.video_area::before {
+    content: ""; /* 가상 요소를 생성합니다. */
+    background-color: #000; /* 배경색을 설정합니다. */
+    opacity: 0.3;
+    position: absolute; /* 가상 요소를 비디오 컨테이너 내부에 절대적으로 배치합니다. */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video_area video {width: 100%; height: 100vh; object-fit: cover;}
+
+
+/**********************************메인 회사소개**********************************/
+.main_about{background-color: #000; color:#fff; padding:20.0rem 0;}
+.main_about_area{display: flex;align-items:center; justify-content: space-between;}
+
+/* 왼쪽 텍스트 영역 */
+.main_about_area .title_area{width: 48%;}
+.main_about_area .title_area h2 .pointColor{display: inline-block;
+  background-image:linear-gradient(90deg, #98ccfa , #3500f8);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main_about_area .title_area h2{text-align:left; margin-bottom: 5.0rem;}
+.main_about_area .title_area h3{font-size: 2.4rem; font-weight: normal; color:#bbb;}
+
+/* 오른쪽 이미지 영역 */
+.main_about .img_area{text-align: center;}
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+.triangle_container {
+  position: relative;
+  margin: auto;
+  width: 65.0rem;
+  height: 55.0rem;
+  filter: drop-shadow(0 0 5px #29ffbf) drop-shadow(0 0 10px #3500f8);
+  display: flex; align-items: center;
+}
+.triangle {
+  width: 45.0rem;
+  height: 45.0rem;
+  clip-path:polygon(
+    50% 0%, 
+    0% 100%, 
+    6% 100%, 
+    50% 11%, 
+    92% 95%, 
+    7% 95%, 
+    0% 100%, 
+    100% 100%
+  );
+  background: conic-gradient(from var(--angle), #29ffbf, #3500f8, #29ffbf);
+  animation: rotate 3s infinite linear;
+  margin: 0 auto;
+}
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.triangle_container .txt{position: absolute; font-size: 2.4rem;text-shadow: -2px 0 #3500f8, 0 2px #3500f8, 2px 0 #3500f8, 0 -2px #3500f8;
+  z-index: 1;
+  filter: none; }
+.triangle_container .text1{top: -0;left: 50%;transform: translateX(-50%);}
+.triangle_container .text2{bottom: 3rem; left: 3rem;}
+.triangle_container .text3{bottom: 3rem; right: 0;}
+.triangle_container .text4{top:45%; left: 50%; transform: translateX(-50%);}
+.triangle_container .text4 span{display: block; font-weight:bold; font-size:3.0rem;} 
+.triangle_container .text4 span::before{display: block; content:""; height: 1px; width: 40%;
+ background-color: #fff;margin: 15% auto;} 
+
+
+.main_about .txt_box{display: flex;justify-content: center;}
+.main_about .txt_box .txt{text-align: center; padding:2.0rem 0 0; font-size:3.0rem; font-weight: bold;}
+
+.main_about .txt_box .txt .pointColor {
+    display: inline-block;
+    background-image: linear-gradient(
+      145deg,
+      #3500f8,
+      #29ffbf,
+      #3500f8
+    );
+    background-size: 300% !important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: Gradient 3s ease infinite !important;
+    -moz-animation: Gradient 3s ease infinite !important;
+    animation: Gradient 3s ease infinite !important;
+  }
+  
+  @-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @-moz-keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  
+/**********************************메인 브랜드*********************************/
+.main_brand .title_area{text-align: center;}
+
+.swiper_wrap {position: relative; width: 100%;}
+.swiper {width: 97%; height: auto; overflow: visible;padding: 5.0rem 0 0;}
+
+.swiper-wrapper {}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  background: white;
+  transition: all 0.3s ease;
+  border-radius:20px;
+}
+.swiper-slide img{width: 100%; border-radius:20px;}
+.swiper-slide.swiper-slide-active {
+  transform: scale(1.3);
+  z-index: 2;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.swiper-slide .swiper-slide-prev{transform: scale(1.1);}
+/* ARROWS */
+.swiper-button-prev,
+.swiper-button-next {
+  color: rgb(246, 146, 89);
+}
+
+/* PAGINATION */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  line-height: 10px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  color: #fff;
+  background-color:#3500f8;
+}
+
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal{bottom:-25%;}

@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/* 브랜드 페이지 상단 스와이퍼 */
+.swiper-slide {height: 50.0rem!important;}
+
+.swiper-slide--one {background: url("../images/brand_main1.jpg") no-repeat 50% 50% / cover; width: 100%; height:50.0rem;}
+.swiper-slide--two {background: url("../images/brand_main2.jpg") no-repeat 50% 50% / cover; width: 100%; height:50.0rem;}
+.swiper-slide--three {background: url("../images/brand_main3.jpg") no-repeat 50% 50% / cover ;width: 100%; height:50.0rem;}
+.swiper-slide--four {background: url("../images/brand_main4.jpg") no-repeat 50% 50% / cover ;width: 100%; height:50.0rem;}
+.swiper-slide--five {background: url("../images/brand_main5.jpg") no-repeat 50% 50% / cover ;width: 100%; height:50.0rem;}
+.swiper-slide--six {background: url("../images/brand_main6.jpg") no-repeat 50% 50% / cover ;width: 100%; height:50.0rem;}
+.swiper-slide--seven {background: url("../images/brand_main7.jpg") no-repeat 50% 50% / cover ;width: 100%; height:50.0rem;}
+
+
+
+.about_ban .video_area video {
+    width: 100%; height: 50rem; object-fit: cover;
+  }
+
+
+
+
+
+.brand_introduction{font-size: 3.5rem; text-align: center; line-height: 1.3;}
+
+
+
+
+
+/* 브랜드 소개 영역 */
+.img_area{position: relative; text-align: center; display: inline-block;}
+.img_area .brand_box{position: relative; }
+.img_area .brand_img{opacity: 1;-webkit-transition: .3s ease-in-out;transition: .3s ease-in-out; width: 100%;}
+.img_area .brand_name{margin-top: 1.0rem; font-size: 1.8rem;}
+
+.img_area .brand_btn{width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: .3s ease-in-out; text-align: center;}
+.img_area .brand_btn img{width: 30%; display:block; margin:0 auto;}
+.img_area .brand_btn .info{margin: 3.0rem 0px 0px;  font-size: 2.5rem; font-weight: 500;}
+.img_area .brand_btn .btn{display: inline-block; margin: 3.0rem 0px 0px; border-radius: 5rem; padding: 1.0rem 2.0rem; border: 1px solid rgb(0, 0, 0); font-size: 2.0rem; font-weight: 500;}
+
+.img_area:hover .brand_img {opacity: 0.2;}
+.img_area:hover .brand_btn{opacity: 1;}
+
+
+/* 이미지 배치 */
+.flex_section{display: flex;justify-content: space-between;align-items: flex-end;}
+
+.flex_section.layer1 .img_area:first-child{width: 50%;text-align: right;} /*안먹은걸로*/
+.flex_section.layer1 .img_area:nth-child(2){ max-width: 30%;  text-align: left;}/*바이바이*/
+
+.flex_section.layer2{margin-top:15.0rem;}
+.flex_section.layer2 .img_area:nth-child(2){ max-width: 40%;  text-align: left;}/*백년누리*/
+.flex_section.layer2{justify-content: space-evenly;}
+
+.flex_section.layer3{margin-top:15.0rem; align-items:flex-start;}
+.flex_section.layer3 .img_area:first-child{width: 35%;text-align: right;}/*닥터풀리*/
+.flex_section.layer3 .img_area:nth-child(2){ max-width: 50%; text-align: left;}/*부자농부*/
+
+.flex_section.layer4{margin-top:15.0rem;}
+.flex_section.layer4 .img_area:first-child{width: 50%;text-align: right;}/*러닝아넥스*/
+.flex_section.layer4 .img_area:first-child .brand_btn img{width:50%;}/*러닝아넥스(로고)*/
+.flex_section.layer4 .img_area:nth-child(2){max-width: 35%; text-align: left;}/*전효백채널*/
+.flex_section.layer4 .img_area:nth-child(2) .brand_btn img{width: 20%; }/*전효백채널(로고)*/

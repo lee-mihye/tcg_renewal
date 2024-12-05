@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/**********************************컬챠 상단 배너**********************************/
+.culture_ban .img_area {background: url("../images/culture_main.jpg") no-repeat 50% 50% / cover ;width: 100%; height:50.0rem;}
+.culture_ban::before {
+    content: ""; /* 가상 요소를 생성합니다. */
+    background-color: #000; /* 배경색을 설정합니다. */
+    opacity: 0.3;
+    position: absolute; /* 가상 요소를 비디오 컨테이너 내부에 절대적으로 배치합니다. */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:50.0rem;;
+}
+
+
+/**********************************컬져 미션**********************************/
+.culture_mission{}
+.culture_mission .textani_area {display: flex; justify-content: center; align-items: center;}
+.culture_mission .textani_area h2 {
+    color: #000;
+    background-image: linear-gradient(
+        90deg,
+        #3500f8,
+        #732b9b,
+        #e74bb8,
+        #3500f8
+      );
+    background-size: 200% 200%; /* Gradient 애니메이션 공간 설정 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 12rem;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    position: relative;
+    line-height: 1;
+
+    /* 애니메이션 설정 */
+    animation: 
+        type 1.5s steps(90) 1s 1 normal both, 
+        cursor 1s step-end infinite 1s, 
+        Gradient 3s ease infinite;
+}
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes Gradient {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: -200% center;
+    }
+  }
+  
+
+
+.culture_mission .text_area {margin-top:10.0rem; text-align: center;}
+.culture_mission .text_area li{font-size: 2.4rem; margin-bottom:4.0rem;}
+.culture_mission .text_area li{display: flex; justify-content: center; align-items: center;}
+.culture_mission .text_area li:last-child{margin-bottom:0;}
+.culture_mission .text_area p{font-size: 5.0rem; font-weight: bold; margin-bottom:1rem;}
+
+
+.culture_mission .text_area p .ms{
+    text-decoration: underline 2px black;
+    text-underline-offset: 8px;
+    animation: meteor-shower-anim linear 1400ms infinite forwards;
+    margin-right:5.0rem;
+  }
+       
+  .ms:nth-of-type(1) {animation-delay: 0ms}
+  .ms:nth-of-type(2) {animation-delay: 100ms}
+  .ms:nth-of-type(3) {animation-delay: 200ms}
+  .ms:nth-of-type(4) {animation-delay: 300ms}
+  .ms:nth-of-type(5) {animation-delay: 400ms}
+  .ms:nth-of-type(6) {animation-delay: 500ms}
+  .ms:nth-of-type(7) {animation-delay: 600ms}
+  .ms:nth-of-type(8) {animation-delay: 700ms}
+  .ms:nth-of-type(9) {animation-delay: 800ms}
+  .ms:nth-of-type(10) {animation-delay: 900ms}
+  .ms:nth-of-type(11) {animation-delay: 1000ms}
+  .ms:nth-of-type(12) {animation-delay: 1100ms}
+  .ms:nth-of-type(13) {animation-delay: 1200ms}
+       
+  @keyframes meteor-shower-anim {
+    0% { text-decoration-color: #3500f8 }
+    10% { text-decoration-color: #732b9b}
+    70% { text-decoration-color: #e74bb8 }
+    100% { text-decoration-color: #3500f8 }
+  }
+
+
+
+/**********************************TCG 20가지 방법**********************************/
+.culture_work{background-color: #f7f7f7; padding:10.0rem;}
+.culture_work .text_area p{text-align: center;font-size: 4.0rem;font-weight: bold; margin-bottom: 5.0rem;}
+
+.culture_work .text_area .Work_Ways{font-size:2.4rem;}
+.culture_work .text_area .Work_Ways ul li{background-color: #ddd; color: #000; margin-bottom: 1.0rem; padding: 2.0rem 5.0rem; border-radius: 10px;
+    transition: all 0.3s ease-in-out; font-weight: 500;}
+.culture_work .text_area .Work_Ways ul li span{font-weight: 300;}
+.culture_work .text_area .Work_Ways ul li:hover{background-color: #444; color: #fff;}
+
+
+
+/**********************************복지혜택**********************************/
+.culture_welfare{}
+.culture_welfare .welfare_area ul{ display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 기본적으로 한 줄에 3개 */
+    gap: 20px; /* 항목 간격 */
+    list-style: none;
+    padding: 0;
+    margin: 0;}
+.culture_welfare .welfare_area ul li{text-align: center; background-color: #f7f7f7; padding:4.0rem; border-radius: 10px;}
+.culture_welfare .welfare_area ul li:hover{background-color: #444;}
+
+.culture_welfare .welfare_area ul li img{display: block; width: 18.0rem; margin: 0 auto 1.5rem;}
+
+.culture_welfare .welfare_area ul li img.hover_img{display: none; /*기본이미지 일 때 hover 이미지 숨기기*/}
+.culture_welfare .welfare_area ul li:hover .hover_img {display: block; /* hover 이미지 표시 */}
+.culture_welfare .welfare_area ul li:hover .default_img {display: none; /* 기본 이미지 숨기기 */ }
+
+.culture_welfare .welfare_area ul li .text{font-size: 2.4rem;}
+.culture_welfare .welfare_area ul li:hover .text{color: #fff;}
+
+
+

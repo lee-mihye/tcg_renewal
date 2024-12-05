@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/**********************************뉴스 상단 배너**********************************/
+.news_ban .img_area {background: url("../images/news_main.jpg") no-repeat 50% 50% / cover ;width: 100%; height:50.0rem;}
+.news_ban::before {
+    content: ""; /* 가상 요소를 생성합니다. */
+    background-color: #000; /* 배경색을 설정합니다. */
+    opacity: 0.3;
+    position: absolute; /* 가상 요소를 비디오 컨테이너 내부에 절대적으로 배치합니다. */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:50.0rem;;
+}
+
+
+/**********************************뉴스 보도**********************************/z
+.news_press{}
+.news_press ul.news_list{ display: flex;
+  flex-wrap: wrap; /* 줄바꿈 허용 */
+  justify-content:space-between;
+  gap: 5%; /* 아이템 간 간격 */
+  list-style: none; /* 불릿 제거 */
+  padding: 0;
+  margin: 0;}
+.news_press ul.news_list li{ width: calc(50% - 5%); /* 한 줄에 2개, 간격 고려 */ 
+  margin-bottom:10rem;  
+  white-space: nowrap; /* 텍스트가 줄 바꿈 없이 한 줄로 유지 */
+  overflow: hidden; /* 텍스트가 넘치면 숨김 */
+  text-overflow: ellipsis; /* 넘친 텍스트를 줄임표로 표시 */
+  border-radius: 20px 20px 0 0;
+}
+
+.news_press ul.news_list li .figure{overflow: hidden;}
+.news_press ul.news_list li .figure img{width: 100%;  border-radius: 20px 20px 0 0; transition: all 0.3s ease-in-out;}
+
+.news_press ul.news_list li .caption{}
+.news_press ul.news_list li .caption .headline{font-size: 2.2rem;; margin: 2rem 0 1rem 0; display: block;
+  overflow: hidden; /* 넘치는 텍스트 숨기기 */
+  text-overflow: ellipsis; /* 줄임표 추가 */}
+.news_press ul.news_list li .caption .date{color: #888;font-size: 1.8rem; }
+
+.news_press ul.news_list li:hover .figure img {transform: scale(1.05,1.05);}
