@@ -2,46 +2,32 @@ $(function () {
     /////////////////////jQB///////////////////////////
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to("#histories", {
-        scrollTrigger: {
+    ScrollTrigger.matchMedia({
+      // 기본 설정 (768px 이상)
+      "(min-width: 769px)": function () {
+        gsap.to("#histories", {
+          scrollTrigger: {
             trigger: ".about_history",
             start: "top 30%",
             endTrigger: ".y15",
             scrub: true,
             toggleClass: { targets: ".fixedBox", className: "sticky" },
-        },
+          },
+        });
+      },
+    
+      // 768px 이하 설정
+      "(max-width: 768px)": function () {
+        gsap.to("#histories", {
+          scrollTrigger: {
+            trigger: ".about_history",
+            start: "top 50%", // 변경된 시작점
+            endTrigger: ".y15",
+            scrub: true,
+            toggleClass: { targets: ".fixedBox", className: "mobile-sticky" }, // 변경된 클래스
+          },
+        });
+      },
     });
-
-
-
-
-    // mm.add("(min-width: 769px)", () => {
-    // gsap.to(".sc-history .fixedNum", {
-    //    scrollTrigger: {
-    //      trigger: ".sc-history .fixedNum",
-    //      pin: true,
-    //      start: "bottom 100%",
-    //      end: '+='+($('.sc-history .fixedBox').outerHeight()   ),
-    //      scrub: 1,
-    //      markers: true,
-
-    //    }
-    //  });
-    // });
-
-    //  mm.add("(max-width: 768px)", () => {
-    //    gsap.to(".sc-history .fixedNum", {
-    //      scrollTrigger: {
-    //        trigger: ".sc-history .fixedNum",
-    //        pin: true,
-    //        start: "bottom 100%",
-    //        end: '+='+($('.sc-history .fixedBox').outerHeight() - $('.sc-history .fixedNum').outerHeight() - 300 ),
-    //        scrub: 1,
-    //        toggleClass: { targets: ".fixedBox", className: "active" },
-    //      }
-    //    });
-    //  });
-
-    // tab
 
 }); /////////////////////jQB////////////////////////////

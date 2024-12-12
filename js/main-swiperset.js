@@ -1,21 +1,35 @@
 $(function () {
-    $(document).ready(function () {
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 5,
-            centeredSlides: true,
-            roundLengths: true,
-            spaceBetween: 30,
-            grabCursor: true,
-            loop: true,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,
+        centeredSlides: true,
+        roundLengths: true,
+        spaceBetween: 30,
+        grabCursor: true,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
             },
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+            769: {
+                slidesPerView: 3,
             },
-          });
+            1025: {
+                slidesPerView: 5,
+            },
+        },
+    });
+
+    // 윈도우 사이즈 변경 시 Swiper 업데이트
+    $(window).resize(function () {
+        swiper.update(); // Swiper 크기와 설정을 업데이트
     });
 
     // 이미지 클릭 시 새 탭에서 인터넷 도메인으로 이동

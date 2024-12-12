@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/common.css" />
         <link rel="stylesheet" href="css/about.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
@@ -18,7 +17,6 @@
         <script src="js/common.js"></script>
         <script src="js/about.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -42,13 +40,16 @@
                             <li><a href="https://teherancompanygroup.ninehire.site" target="_blank">Recruit</a></li>
                         </ul>
                     </nav>
-                    <div class="ham">
-                        <div class="line-menu half start"></div>
-                        <div class="line-menu"></div>
-                        <div class="line-menu half end"></div>
+                    <div class="ham_btn">
+                        <div class="ham">
+                            <div class="line-menu half start"></div>
+                            <div class="line-menu"></div>
+                            <div class="line-menu half end"></div>
+                        </div>
                     </div>
                     <div class="ham_menu">
                         <ul class="ham_gnb">
+                            <li><a href="index.html">home</a></li>
                             <li><a href="about.html">About us</a></li>
                             <li><a href="brand.html">Brand</a></li>
                             <li><a href="culture.html">Culture</a></li>
@@ -61,12 +62,12 @@
 
             <!-- 어바웃 상단 배너 -->
             <div class="about_ban">
-                <div class="txt_area">
+                <!-- <div class="txt_area">
                     <div class="inner">
-                        <h2>Be Bold Be Fast Be Pro</h2>
+                        <h2>Be Bold <br class="mo_block">Be Fast <br class="mo_block">Be Pro</h2>
                         <p>대담하게 빠르게 프로답게</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="video_area">
                     <video autoplay loop muted playsinline>
                         <source src="images/about_video.mp4" type="video/mp4" />
@@ -83,9 +84,9 @@
                         <h2>CEO 소개</h2>
                     </div>
                     <div class="ceo_area">
-                        <div class="title_area">
-                            <p data-aos="fade-up" data-aos-duration="1000">전효백 대표이사</p>
-                            <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="title_area" data-aos="fade-up" data-aos-duration="1000">
+                            <p>전효백 대표이사</p>
+                            <h3>
                                 전효백 대표이사는 온라인마케팅 시장에서 실전마케터로 인정받는 몇 안되는 플레이어로서 강의와 경영 일선에서 직접 메가폰을 잡고 운영하고 있습니다.
                                 <br /><br />
                                 그간 연쇄창업을 통해 쌓인 노하우를 온전히 테헤란컴퍼니그룹을 성장시키는데 집중하고 있습니다.
@@ -107,186 +108,189 @@
 
             <!-- 회사 연혁 -->
             <div class="about_history" data-aos="fade-up" data-aos-duration="1000">
-                <div class="title_area">
-                    <h2>History</h2>
-                </div>
-
-                <!-- 히스토리  -->
-                <div id="history_wrap">
-                    <div class="year fixedBox">
-                        <span class="fixedNum bebas-neue-regular">20</span>
+                <div class="inner">
+                    <div class="title_area">
+                        <h2>History</h2>
                     </div>
-
-                    <div id="histories">
-                        <!-- 2024년 -->
-                        <div class="year-flexbox" style="padding-top: 0">
-                            <div class="year">24</div>
-                            <ul class="history">
-                                <li>
-                                    <strong>12월</strong>
-                                    <div class="contents">테헤란컴퍼니그룹 역삼동 사옥 이전</div>
-                                </li>
-                                <li>
-                                    <strong>11월</strong>
-                                    <div class="contents">
-                                        식물성 멜라토닌 브랜드 '닥터풀리' 론칭<br />
-                                        유기농 과·채주스 브랜드 '부자농부' 론칭
-                                    </div>
-                                </li>
-                            </ul>
+                    <!-- 히스토리  -->
+                    <div id="history_wrap">
+                        <div class="year fixedBox">
+                            <span class="fixedNum bebas-neue-regular">20</span>
                         </div>
-
-                        <!-- 2023년 -->
-                        <div class="year-flexbox">
-                            <div class="year">23</div>
-                            <ul class="history">
-                                <li>
-                                    <strong>12월</strong>
-                                    <div class="contents">기술혁신형 중소기업 INNOBIZ 인증</div>
-                                </li>
-                                <li>
-                                    <strong>10월</strong>
-                                    <div class="contents">
-                                        환경경영시스템(ISO 14001) 인증 취득<br />
-                                        품질경영시스템(ISO 9001) 인증 취득<br />
-                                        안전보건경영시스템 인증서(ISO 45001) 인증 취득
-                                    </div>
-                                </li>
-                                <li>
-                                    <strong>09월</strong>
-                                    <div class="contents">부동산 유튜브 채널 10만명 돌파</div>
-                                </li>
-                            </ul>
+                        <div id="histories">
+                            <!-- 2024년 -->
+                            <div class="year-flexbox" style="padding-top: 0">
+                                <div class="year">24</div>
+                                <ul class="history">
+                                    <li>
+                                        <strong>12월</strong>
+                                        <div class="contents">테헤란컴퍼니그룹 역삼동 사옥 이전</div>
+                                    </li>
+                                    <li>
+                                        <strong>11월</strong>
+                                        <div class="contents">
+                                            식물성 멜라토닌 브랜드 '닥터풀리' 론칭<br />
+                                            유기농 과·채주스 브랜드 '부자농부' 론칭
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 2023년 -->
+                            <div class="year-flexbox">
+                                <div class="year">23</div>
+                                <ul class="history">
+                                    <li>
+                                        <strong>12월</strong>
+                                        <div class="contents">기술혁신형 중소기업 INNOBIZ 인증</div>
+                                    </li>
+                                    <li>
+                                        <strong>10월</strong>
+                                        <div class="contents">
+                                            환경경영시스템(ISO 14001) 인증 취득<br />
+                                            품질경영시스템(ISO 9001) 인증 취득<br />
+                                            안전보건경영시스템 인증서(ISO 45001) 인증 취득
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <strong>09월</strong>
+                                        <div class="contents">부동산 유튜브 채널 10만명 돌파</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 2022년 -->
+                            <div class="year-flexbox">
+                                <div class="year">22</div>
+                                <ul class="history">
+                                    <li>
+                                        <strong>11월</strong>
+                                        <div class="contents">특허등록(10-2472393)<br />하이브리드 온라인 교육 정보 제공 시스템 및 그 방법</div>
+                                    </li>
+                                    <li>
+                                        <strong>07월</strong>
+                                        <div class="contents">벤처기업 혁신성장유형 인증 취득</div>
+                                    </li>
+                                    <li>
+                                        <strong>06월</strong>
+                                        <div class="contents">러닝아넥스 리뉴얼 오픈(舊 전효백아카데미)</div>
+                                    </li>
+                                    <li>
+                                        <strong>03월</strong>
+                                        <div class="contents">프리미엄 건강식품 브랜드 '백년누리' 론칭</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 2021년 -->
+                            <div class="year-flexbox">
+                                <div class="year">21</div>
+                                <ul class="history">
+                                    <li>
+                                        <strong>07월</strong>
+                                        <div class="contents">안먹은걸로 브랜드모델 'SES 유진'</div>
+                                    </li>
+                                    <li>
+                                        <strong>03월</strong>
+                                        <div class="contents">베트남 고미몰 진출</div>
+                                    </li>
+                                    <li>
+                                        <strong>01월</strong>
+                                        <div class="contents">다이어트바이바이 브랜드모델 '권혁수'</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 2020년
+                            <div class="year-flexbox">
+                                <div class="year">20</div>
+                                <ul class="history">
+                                    <li>
+                                        <strong>12월</strong>
+                                        <div class="contents">
+                                            제57회 무역의 날 3천만불 수출의 탑 수상<br />
+                                            연매출 200억원 돌파
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <strong>11월</strong>
+                                        <div class="contents">기업부설연구소 '글로벌피부과학연구원' 설립<br /></div>
+                                    </li>
+                                    <li>
+                                        <strong>06월</strong>
+                                        <div class="contents">포맨트 홍콩 자사몰 론칭</div>
+                                    </li>
+                                </ul>
+                            </div>-->
+                            <!-- 2019년 -->
+                            <div class="year-flexbox">
+                                <div class="year">19</div>
+                                <ul class="history">
+                                    <li>
+                                        <strong>11월</strong>
+                                        <div class="contents">'안먹은걸로' 네이버 실시간 검색어 1위</div>
+                                    </li>
+                                    <li>
+                                        <strong>04월</strong>
+                                        <div class="contents">LOTTE 롭스 전지점 입점</div>
+                                    </li>
+                                    <li>
+                                        <strong>01월</strong>
+                                        <div class="contents">'안먹은걸로' 세븐일레븐 명절세트 입점</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 2018년 -->
+                            <div class="year-flexbox">
+                                <div class="year">18</div>
+                                <ul class="history">
+                                    <li>
+                                        <strong>11월</strong>
+                                        <div class="contents">2018 BALACNE FESTIVAL 박람회 참가</div>
+                                    </li>
+                                    <li>
+                                        <strong>05월</strong>
+                                        <div class="contents">인포모셜 녹화홈쇼핑 런칭</div>
+                                    </li>
+                                    <li>
+                                        <strong>04월</strong>
+                                        <div class="contents">GS리테일 랄라블라 입점</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 2017년 -->
+                            <div class="year-flexbox">
+                                <div class="year">17</div>
+                                <ul class="history">
+                                    <li>
+                                        <strong>06월</strong>
+                                        <div class="contents">차세대 다이어트 식품 브랜드 '안먹은걸로' 론칭</div>
+                                    </li>
+                                    <li>
+                                        <strong>05월</strong>
+                                        <div class="contents">시치미뚝 사업자 설립</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 2016년 -->
+                            <div class="year-flexbox">
+                                <div class="year">16</div>
+                                <ul class="history">
+                                    <li>
+                                        <strong>06월</strong>
+                                        <div class="contents">주식회사 괜찮은마케팅 법인 설립</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 2015년 -->
+                            <div class="year-flexbox">
+                                <div class="year y15">15</div>
+                                <ul class="history pc">
+                                    <li>
+                                        <strong>09월</strong>
+                                        <div class="contents">‘네이버 상위노출의 모든 것‘ 도서 발행</div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-
-                        <!-- 2022년 -->
-                        <div class="year-flexbox">
-                            <div class="year">22</div>
-                            <ul class="history">
-                                <li>
-                                    <strong>11월</strong>
-                                    <div class="contents">특허등록(10-2472393)<br />하이브리드 온라인 교육 정보 제공 시스템 및 그 방법</div>
-                                </li>
-                                <li>
-                                    <strong>07월</strong>
-                                    <div class="contents">벤처기업 혁신성장유형 인증 취득</div>
-                                </li>
-                                <li>
-                                    <strong>06월</strong>
-                                    <div class="contents">러닝아넥스 리뉴얼 오픈(舊 전효백아카데미)</div>
-                                </li>
-                                <li>
-                                    <strong>03월</strong>
-                                    <div class="contents">프리미엄 건강식품 브랜드 '백년누리' 론칭</div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- 2021년 -->
-                        <div class="year-flexbox">
-                            <div class="year">21</div>
-                            <ul class="history">
-                                <li>
-                                    <strong>07월</strong>
-                                    <div class="contents">안먹은걸로 브랜드모델 'SES 유진'</div>
-                                </li>
-                                <li>
-                                    <strong>03월</strong>
-                                    <div class="contents">베트남 고미몰 진출</div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- 2020년 
-                        <div class="year-flexbox">
-                            <div class="year">20</div>
-                            <ul class="history">
-                                <li>
-                                    <strong>12월</strong>
-                                    <div class="contents">
-                                        제57회 무역의 날 3천만불 수출의 탑 수상<br />
-                                        연매출 200억원 돌파
-                                    </div>
-                                </li>
-                                <li>
-                                    <strong>11월</strong>
-                                    <div class="contents">기업부설연구소 '글로벌피부과학연구원' 설립<br /></div>
-                                </li>
-                                <li>
-                                    <strong>06월</strong>
-                                    <div class="contents">포맨트 홍콩 자사몰 론칭</div>
-                                </li>
-                            </ul>
-                        </div>-->
-
-                        <!-- 2019년 -->
-                        <div class="year-flexbox">
-                            <div class="year">19</div>
-                            <ul class="history">
-                                <li>
-                                    <strong>11월</strong>
-                                    <div class="contents">'안먹은걸로' 네이버 실시간 검색어 1위</div>
-                                </li>
-                                <li>
-                                    <strong>04월</strong>
-                                    <div class="contents">LOTTE 롭스 전지점 입점</div>
-                                </li>
-                                <li>
-                                    <strong>01월</strong>
-                                    <div class="contents">'안먹은걸로' 세븐일레븐 명절세트 입점</div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- 2018년 -->
-                        <div class="year-flexbox">
-                            <div class="year">18</div>
-                            <ul class="history">
-                                <li>
-                                    <strong>11월</strong>
-                                    <div class="contents">2018 BALACNE FESTIVAL 박람회 참가</div>
-                                </li>
-                                <li>
-                                    <strong>05월</strong>
-                                    <div class="contents">인포모셜 녹화홈쇼핑 런칭</div>
-                                </li>
-                                <li>
-                                    <strong>04월</strong>
-                                    <div class="contents">GS리테일 랄라블라 입점</div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- 2017년 -->
-                        <div class="year-flexbox">
-                            <div class="year">17</div>
-                            <ul class="history">
-                                <li>
-                                    <strong>06월</strong>
-                                    <div class="contents">차세대 다이어트 식품 브랜드 '안먹은걸로' 론칭</div>
-                                </li>
-                                <li>
-                                    <strong>05월</strong>
-                                    <div class="contents">시치미뚝 사업자 설립</div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- 2016년 -->
-                        <div class="year-flexbox">
-                            <div class="year">16</div>
-                            <ul class="history">
-                                <li>
-                                    <strong>06월</strong>
-                                    <div class="contents">주식회사 괜찮은마케팅 법인 설립</div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- 2015년 -->
-                        <div class="year-flexbox">
-                            <div class="year y15">15</div>
-                            <ul class="history">
+                        <div id="histories_mo">
+                            <ul class="history mo">
                                 <li>
                                     <strong>09월</strong>
                                     <div class="contents">‘네이버 상위노출의 모든 것‘ 도서 발행</div>
@@ -302,7 +306,7 @@
             <div class="about_ban2">
                 <div class="txt_area">
                     <div class="inner">
-                        <h2>성장을 멈추지 않는 TCG의<br>사내문화</h2>
+                        <h2>성장을 멈추지 않는<br>TCG의 사내문화</h2>
                         <p><a href="culture.html">View More ▸</a></p>
                     </div>
                 </div>

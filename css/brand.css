@@ -13,13 +13,7 @@
 
 
 
-.about_ban .video_area video {
-    width: 100%; height: 50rem; object-fit: cover;
-  }
-
-
-
-
+.about_ban .video_area video {width: 100%; height: 50rem; object-fit: cover;}
 
 .brand_introduction{font-size: 2.4rem; text-align: center;}
 
@@ -28,7 +22,7 @@
 
 
 /* 브랜드 소개 영역 */
-.img_area{position: relative; text-align: center; display: inline-block;}
+.img_area{position: relative; text-align: center;}
 .img_area .brand_box{position: relative; }
 .img_area .brand_img{opacity: 1;-webkit-transition: .3s ease-in-out;transition: .3s ease-in-out; width: 100%;}
 .img_area .brand_name{margin-top: 1.0rem; font-size: 1.8rem;}
@@ -39,7 +33,10 @@
 .img_area .brand_btn .btn{display: inline-block; margin: 3.0rem 0px 0px; border-radius: 5rem; padding: 1.0rem 2.0rem; border: 1px solid rgb(0, 0, 0); font-size: 2.0rem; font-weight: 500;}
 
 .img_area:hover .brand_img {opacity: 0.2;}
-.img_area:hover .brand_btn{opacity: 1;}
+.img_area:hover .brand_btn {
+    opacity: 1;
+    visibility: visible;
+}
 
 
 /* 이미지 배치 */
@@ -48,9 +45,8 @@
 .flex_section.layer1 .img_area:first-child{width: 50%;text-align: right;} /*안먹은걸로*/
 .flex_section.layer1 .img_area:nth-child(2){ max-width: 30%;  text-align: left;}/*바이바이*/
 
-.flex_section.layer2{margin-top:15.0rem;}
+.flex_section.layer2{margin-top:15.0rem; justify-content: space-evenly;}
 .flex_section.layer2 .img_area:nth-child(2){ max-width: 40%;  text-align: left;}/*백년누리*/
-.flex_section.layer2{justify-content: space-evenly;}
 
 .flex_section.layer3{margin-top:15.0rem; align-items:flex-start;}
 .flex_section.layer3 .img_area:first-child{width: 35%;text-align: right;}/*닥터풀리*/
@@ -61,3 +57,56 @@
 .flex_section.layer4 .img_area:first-child .brand_btn img{width:50%;}/*러닝아넥스(로고)*/
 .flex_section.layer4 .img_area:nth-child(2){max-width: 35%; text-align: left;}/*전효백채널*/
 .flex_section.layer4 .img_area:nth-child(2) .brand_btn img{width: 20%; }/*전효백채널(로고)*/
+
+
+
+
+
+
+/**********************************미디어쿼리**********************************/
+/* 노트북 & 태블릿 가로 (해상도 1280px ~) */ 
+@media only screen and (max-width:1280px) {/* 1rem = 9px */
+
+}
+  
+/* 태블릿 가로 (해상도 1024px ~)*/ 
+@media only screen and (max-width: 1024px) {/* 1rem = 8px */
+
+}
+  
+  
+  
+/* 모바일 가로 & 테블릿 세로 (해상도 768px ~)*/ 
+@media only screen and (max-width:768px) {
+  .img_area .brand_btn {
+    display: none; /* 기본적으로 숨김 */
+}
+.img_area:hover .brand_img{opacity: 1;}
+    .img_area .brand_name{margin-bottom: 7.142857rem; font-size: 2.285714rem;}
+
+    /* 이미지 배치 */
+    .flex_section{display: block;}
+    .flex_section.layer1 .img_area:first-child{width: 100%;text-align: left;} /*안먹은걸로*/
+    .flex_section.layer1 .img_area:nth-child(2){ max-width: 100%;}/*바이바이*/
+
+    .flex_section.layer2{margin-top:0;}
+    .flex_section.layer2 .img_area:nth-child(2){ max-width: 100%;}/*백년누리*/
+
+    .flex_section.layer3{margin-top: 0;}
+    .flex_section.layer3 .img_area:first-child{width: 100%;text-align: left;}/*닥터풀리*/
+    .flex_section.layer3 .img_area:nth-child(2){ max-width: 100%;}/*부자농부*/
+
+    .flex_section.layer4{margin-top:0;}
+    .flex_section.layer4 .img_area:first-child{width: 100%;text-align: left;}/*러닝아넥스*/
+    .flex_section.layer4 .img_area:first-child .brand_btn img{width:50%;}/*러닝아넥스(로고)*/
+    .flex_section.layer4 .img_area:nth-child(2){max-width: 100%;}/*전효백채널*/
+    .flex_section.layer4 .img_area:nth-child(2) .brand_btn img{width: 20%; }/*전효백채널(로고)*/
+} 
+  
+  
+  /* 모바일 세로 (해상도 480px~)*/ 
+  @media only screen and (max-width: 480px) {/* 1rem = 7px */
+
+  }
+  
+  

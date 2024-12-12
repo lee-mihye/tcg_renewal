@@ -32,6 +32,18 @@ $(function () {
         }
     });
 
+    
+    // ham_gnb의 링크 클릭 시 메뉴 닫기
+    $(".ham_gnb a").click(function () {
+        // 메뉴 닫기
+        $(".ham_menu").removeClass("open");
+        $(".ham").removeClass("avtive");
+
+        // 스크롤 가능하도록 설정
+        $("body").removeClass("no-scroll");
+    });
+
+
     // 현재 페이지 파일명 가져오기
     const currentPage = window.location.pathname.split("/").pop();
 
