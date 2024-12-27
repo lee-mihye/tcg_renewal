@@ -46,7 +46,7 @@
 .flex_section{display: flex;justify-content: space-between;align-items: flex-end;}
 
 .flex_section.layer1 .img_area:first-child{width: 50%;text-align: right;} /*안먹은걸로*/
-.flex_section.layer1 .img_area:nth-child(2){ max-width: 30%;  text-align: left;}/*바이바이*/
+.flex_section.layer1 .img_area:nth-child(2){ max-width: 38%;  text-align: left;}/*바이바이*/
 
 .flex_section.layer2{margin-top:15.0rem; justify-content: space-evenly;}
 .flex_section.layer2 .img_area:nth-child(2){ max-width: 40%;  text-align: left;}/*백년누리*/
